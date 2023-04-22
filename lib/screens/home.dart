@@ -117,8 +117,25 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Details()),
+                          MaterialPageRoute(
+                              builder: (context) => Details(
+                                    title: listResponse[index]['title'],
+                                    thumbnail: listResponse[index]['thumbnail']
+                                        .toString(),
+                                    release_date: listResponse[index]['release_date']
+                                        .toString(),
+                                    short_desc: listResponse[index]['short_description'].toString()
+                                        ,
+                                    genre: listResponse[index]['genre'],
+                                    platform: listResponse[index]['platform']
+                                        .toString(),
+                                    publisher: listResponse[index]['publisher']
+                                        .toString(),
+                                    url: listResponse[index]['game_url']
+                                        .toString(),
+                                  )),
                         );
+                        print(listResponse[index]['url'].toString());
                       },
                       child: Image.network(listResponse[index]["thumbnail"])),
                 ),
