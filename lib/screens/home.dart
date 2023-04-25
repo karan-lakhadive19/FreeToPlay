@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ftp/screens/details.dart';
 import 'package:ftp/screens/pc.dart';
 import 'package:ftp/screens/shooter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
@@ -57,7 +58,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.purple[100],
+        backgroundColor: Colors.white,
         drawer: Drawer(
             backgroundColor: Colors.purple[200],
             child: ListView(
@@ -100,12 +101,13 @@ class _HomePageState extends State<HomePage> {
               ],
             )),
         appBar: AppBar(
-          backgroundColor: Colors.purple,
-          centerTitle: true,
-          title: Text(
-            'Popular Games',
-          ),
-        ),
+            backgroundColor: Colors.black,
+            centerTitle: true,
+            title: Text(
+              "Popular Games",
+              style:
+                  GoogleFonts.roboto(fontSize: 22, fontWeight: FontWeight.w800),
+            )),
         body: ListView.builder(
           itemBuilder: (context, index) {
             return Container(
@@ -122,10 +124,12 @@ class _HomePageState extends State<HomePage> {
                                     title: listResponse[index]['title'],
                                     thumbnail: listResponse[index]['thumbnail']
                                         .toString(),
-                                    release_date: listResponse[index]['release_date']
+                                    release_date: listResponse[index]
+                                            ['release_date']
                                         .toString(),
-                                    short_desc: listResponse[index]['short_description'].toString()
-                                        ,
+                                    short_desc: listResponse[index]
+                                            ['short_description']
+                                        .toString(),
                                     genre: listResponse[index]['genre'],
                                     platform: listResponse[index]['platform']
                                         .toString(),
@@ -139,7 +143,18 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Image.network(listResponse[index]["thumbnail"])),
                 ),
-                Container(child: Text(listResponse[index]["title"].toString()))
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                    child: Text(
+                  listResponse[index]["title"].toString(),
+                  style: GoogleFonts.roboto(
+                      fontSize: 16, fontWeight: FontWeight.w600),
+                )),
+                SizedBox(
+                  height: 20,
+                )
               ],
             ));
           },

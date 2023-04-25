@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:ftp/screens/home.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Details extends StatelessWidget {
   String title;
@@ -19,19 +22,55 @@ class Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Details'),
+        centerTitle: true,
+        backgroundColor: Colors.black,
+        title: Text(title, style: GoogleFonts.roboto(fontSize: 22, fontWeight: FontWeight.w800),)
+        
       ),
-      body: ListView(
-        children: [
-          Text(title),
-          Image.network(thumbnail),
-          Text(release_date),
-          Text(short_desc),
-          Text(genre),
-          Text(platform),
-          Text(publisher),
-          Text(url)
-        ],
+      body: Container(
+        // color: Colors.purple[200],
+        child: ListView(
+          children: [
+
+            Container( child: Image.network(thumbnail)),
+            SizedBox(height: 15,),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Release Date: "+release_date, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+            ),
+            SizedBox(height: 15,),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Description: "+short_desc, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+            ),
+            SizedBox(height: 15,),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Genre: "+genre, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+            ),
+            SizedBox(height: 15,),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Platform: "+platform, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+            ),
+            SizedBox(height: 15,),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Publisher: "+publisher, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+            ),
+            SizedBox(height: 15,),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Link: "+url, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+            )
+          ],
+        ),
       )
     );
   }
