@@ -60,19 +60,19 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         backgroundColor: Colors.white,
         drawer: Drawer(
-            backgroundColor: Colors.purple[200],
+            backgroundColor: Colors.black87,
             child: ListView(
               children: <Widget>[
                 DrawerHeader(
-                  child: Text('Drawer Header'),
+                  child: Text('Drawer Header', style: TextStyle(color: Colors.white),),
                   decoration: BoxDecoration(
-                    color: Colors.purple,
+                    color: Colors.black,
                   ),
                 ),
                 Container(
-                  color: Colors.red,
+                  color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('PC Games'),
+                    title: Text('PC Games', style: TextStyle(color: Colors.white),),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -86,9 +86,9 @@ class _HomePageState extends State<HomePage> {
                   height: 5,
                 ),
                 Container(
-                  color: Colors.red,
+                  color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('Shooter Games'),
+                    title: Text('Browser Games', style: TextStyle(color: Colors.white),),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -97,7 +97,106 @@ class _HomePageState extends State<HomePage> {
                       );
                     },
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  color: Color.fromARGB(255, 36, 35, 35),
+                  child: ListTile(
+                    title: Text('Battle Royale Games', style: TextStyle(color: Colors.white),),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Shooter()),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  color: Color.fromARGB(255, 36, 35, 35),
+                  child: ListTile(
+                    title: Text('Racing Games', style: TextStyle(color: Colors.white),),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Shooter()),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  color: Color.fromARGB(255, 36, 35, 35),
+                  child: ListTile(
+                    title: Text('Shooter Games', style: TextStyle(color: Colors.white),),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Shooter()),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  color: Color.fromARGB(255, 36, 35, 35),
+                  child: ListTile(
+                    title: Text('Survival Games', style: TextStyle(color: Colors.white),),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Shooter()),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  color: Color.fromARGB(255, 36, 35, 35),
+                  child: ListTile(
+                    title: Text('Strategy Games', style: TextStyle(color: Colors.white),),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Shooter()),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  color: Color.fromARGB(255, 36, 35, 35),
+                  child: ListTile(
+                    title: Text('Open World Games', style: TextStyle(color: Colors.white),),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Shooter()),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
               ],
             )),
         appBar: AppBar(
@@ -111,6 +210,7 @@ class _HomePageState extends State<HomePage> {
         body: ListView.builder(
           itemBuilder: (context, index) {
             return Container(
+              color: Colors.black87,
                 child: Column(
               children: [
                 Padding(
@@ -150,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                     child: Text(
                   listResponse[index]["title"].toString(),
                   style: GoogleFonts.roboto(
-                      fontSize: 16, fontWeight: FontWeight.w600),
+                      fontSize: 16, fontWeight: FontWeight.w600,color: Colors.white),
                 )),
                 SizedBox(
                   height: 20,
