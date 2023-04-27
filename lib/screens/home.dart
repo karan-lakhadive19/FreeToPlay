@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
             child: ListView(
               children: <Widget>[
                 DrawerHeader(
-                  child: Text('Drawer Header', style: TextStyle(color: Colors.white),),
+                  child: Center(child: Text('Explore The Free Games Of Different Categories',textAlign: TextAlign.start, style: TextStyle(color: Colors.white,fontSize: 27, fontWeight: FontWeight.bold),)),
                   decoration: BoxDecoration(
                     color: Colors.black,
                   ),
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('PC Games', style: TextStyle(color: Colors.white),),
+                    title: Text('PC Games', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('Browser Games', style: TextStyle(color: Colors.white),),
+                    title: Text('Browser Games', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('Battle Royale Games', style: TextStyle(color: Colors.white),),
+                    title: Text('Battle Royale Games', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('Fighting Games', style: TextStyle(color: Colors.white),),
+                    title: Text('Fighting Games', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('Shooter Games', style: TextStyle(color: Colors.white),),
+                    title: Text('Shooter Games', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -158,7 +158,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('Survival Games', style: TextStyle(color: Colors.white),),
+                    title: Text('Survival Games',style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('Strategy Games', style: TextStyle(color: Colors.white),),
+                    title: Text('Strategy Games',style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('Open World Games', style: TextStyle(color: Colors.white),),
+                    title: Text('Open World Games', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
@@ -256,7 +256,7 @@ class _HomePageState extends State<HomePage> {
                     child: Text(
                   listResponse[index]["title"].toString(),
                   style: GoogleFonts.roboto(
-                      fontSize: 16, fontWeight: FontWeight.w600,color: Colors.white),
+                      fontSize: 20, fontWeight: FontWeight.w600,color: Colors.white),
                 )),
                 SizedBox(
                   height: 20,
