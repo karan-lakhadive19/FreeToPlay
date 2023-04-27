@@ -5,6 +5,7 @@ import 'package:ftp/screens/battleRoyale.dart';
 import 'package:ftp/screens/browser.dart';
 import 'package:ftp/screens/details.dart';
 import 'package:ftp/screens/pc.dart';
+import 'package:ftp/screens/fighting.dart';
 import 'package:ftp/screens/shooter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
@@ -122,12 +123,12 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   color: Color.fromARGB(255, 36, 35, 35),
                   child: ListTile(
-                    title: Text('Racing Games', style: TextStyle(color: Colors.white),),
+                    title: Text('Fighting Games', style: TextStyle(color: Colors.white),),
                     onTap: () {
                       Navigator.pop(context);
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Shooter()),
+                        MaterialPageRoute(builder: (context) => Fighting()),
                       );
                     },
                   ),
