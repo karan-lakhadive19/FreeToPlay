@@ -1,25 +1,26 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:ftp/screens/details.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 
-class PC extends StatefulWidget {
-  const PC({super.key});
+import 'details.dart';
+
+class Browser extends StatefulWidget {
+  const Browser({super.key});
 
   @override
-  State<PC> createState() => _PCState();
+  State<Browser> createState() => _BrowserState();
 }
 
 String stringResponse = ' ';
 List listResponse = [];
 
-class _PCState extends State<PC> {
+class _BrowserState extends State<Browser> {
+
   Future apicall() async {
     http.Response response;
-    var url = Uri.parse('https://www.freetogame.com/api/games?platform=pc');
-
+    var url = Uri.parse('https://www.freetogame.com/api/games?platform=browser');
     response = await http.get(url, headers: {
       'X-RapidAPI-Key': '6acab100c1msh64dc92d18064a50p13562fjsnc03cefd2f0c3',
       'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
@@ -29,12 +30,10 @@ class _PCState extends State<PC> {
           'Origin,Content-Type,X-RapidAPI-Key,X-RapidAPI-Host',
       'Access-Control-Allow-Credentials': 'true'
     });
-
-    if (response.statusCode == 200) {
+    if(response.statusCode==200) {
       setState(() {
         stringResponse = response.body;
         listResponse = json.decode(response.body);
-        // print(stringResponse);
       });
     }
   }
@@ -46,14 +45,12 @@ class _PCState extends State<PC> {
     super.initState();
   }
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text('PC Games'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: Text('Browser Games'), centerTitle: true,backgroundColor: Colors.black,),
       body: ListView.builder(
           itemBuilder: (context, index) {
             return Container(
