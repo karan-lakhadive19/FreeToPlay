@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:ftp/screens/battleRoyale.dart';
 import 'package:ftp/screens/browser.dart';
 import 'package:ftp/screens/details.dart';
 import 'package:ftp/screens/pc.dart';
@@ -110,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pop(context);
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Shooter()),
+                        MaterialPageRoute(builder: (context) => BattleRoyale()),
                       );
                     },
                   ),
