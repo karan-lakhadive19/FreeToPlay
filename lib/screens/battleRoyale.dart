@@ -50,7 +50,8 @@ class _BattleRoyaleState extends State<BattleRoyale> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Battle Royale Games'), centerTitle: true,backgroundColor: Colors.black,),
+      appBar: AppBar(title: Text('Battle Royale Games',style:
+                  GoogleFonts.roboto(fontSize: 22, fontWeight: FontWeight.w800),), centerTitle: true,backgroundColor: Colors.black,),
       body: ListView.builder(
           itemBuilder: (context, index) {
             return Container(

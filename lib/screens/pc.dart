@@ -51,7 +51,8 @@ class _PCState extends State<PC> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text('PC Games'),
+        title: Text('PC Games',style:
+                  GoogleFonts.roboto(fontSize: 22, fontWeight: FontWeight.w800),),
         centerTitle: true,
       ),
       body: ListView.builder(

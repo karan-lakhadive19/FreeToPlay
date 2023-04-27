@@ -50,7 +50,8 @@ class _BrowserState extends State<Browser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Browser Games'), centerTitle: true,backgroundColor: Colors.black,),
+      appBar: AppBar(title: Text('Browser Games',style:
+                  GoogleFonts.roboto(fontSize: 22, fontWeight: FontWeight.w800),), centerTitle: true,backgroundColor: Colors.black,),
       body: ListView.builder(
           itemBuilder: (context, index) {
             return Container(
