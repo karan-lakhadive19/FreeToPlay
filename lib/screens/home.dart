@@ -4,9 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:ftp/screens/battleRoyale.dart';
 import 'package:ftp/screens/browser.dart';
 import 'package:ftp/screens/details.dart';
+import 'package:ftp/screens/openworld.dart';
 import 'package:ftp/screens/pc.dart';
 import 'package:ftp/screens/fighting.dart';
 import 'package:ftp/screens/shooter.dart';
+import 'package:ftp/screens/strategy.dart';
+import 'package:ftp/screens/survival.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 
@@ -160,7 +163,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pop(context);
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Shooter()),
+                        MaterialPageRoute(builder: (context) => Survival()),
                       );
                     },
                   ),
@@ -176,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pop(context);
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Shooter()),
+                        MaterialPageRoute(builder: (context) => Strategy()),
                       );
                     },
                   ),
@@ -192,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pop(context);
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Shooter()),
+                        MaterialPageRoute(builder: (context) => OpenWorld()),
                       );
                     },
                   ),

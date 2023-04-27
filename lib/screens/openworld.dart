@@ -6,21 +6,21 @@ import 'package:http/http.dart' as http;
 
 import 'details.dart';
 
-class Shooter extends StatefulWidget {
-  const Shooter({super.key});
+class OpenWorld extends StatefulWidget {
+  const OpenWorld({super.key});
 
   @override
-  State<Shooter> createState() => ShooterState();
+  State<OpenWorld> createState() => OpenWorldState();
 }
 
 String stringResponse = ' ';
 List listResponse = [];
 
-class ShooterState extends State<Shooter> {
+class OpenWorldState extends State<OpenWorld> {
 
   Future apicall() async {
     http.Response response;
-    var url = Uri.parse('https://www.freetogame.com/api/games?category=fighting');
+    var url = Uri.parse('https://www.freetogame.com/api/games?category=open-world');
     response = await http.get(url, headers: {
       'X-RapidAPI-Key': '6acab100c1msh64dc92d18064a50p13562fjsnc03cefd2f0c3',
       'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
@@ -50,7 +50,7 @@ class ShooterState extends State<Shooter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Shooter Games'), centerTitle: true,backgroundColor: Colors.black,),
+      appBar: AppBar(title: Text('Open World Games'), centerTitle: true,backgroundColor: Colors.black,),
       body: ListView.builder(
           itemBuilder: (context, index) {
             return Container(
